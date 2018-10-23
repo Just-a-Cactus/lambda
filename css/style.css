@@ -81,6 +81,23 @@ button,
 	border-color: rgba(255, 255, 255, .7);
 }
 
+.ba-button--primary {
+	border: 1px solid #c89f2d;
+	background-color: rgba(200, 159, 45, .98);
+	height: 34px;
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 34px;
+	text-transform: none;
+
+	font-size: 16px;
+}
+
+.ba-button--primary:hover {
+	background-color: rgba(200, 159, 45, .6);
+
+}
+
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover,
@@ -101,9 +118,19 @@ input[type="email"],
 input[type="password"],
 input[type="number"],
 input[type="tel"],
+input[type="date"],
 textarea,
 select {
 	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	border: 1px solid #c8c6c6;
+	background-color: rgba(255, 255, 255, 0.4);
+	height: 36px;
+	padding: 5px 11px;
+	border-radius: 0;
+	font-style: italic;
+	color: #7c7c7c;
+	font-size: 16px;
+
 }
 
 input[type="text"]:focus,
@@ -111,8 +138,26 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="number"]:focus,
 input[type="tel"]:focus,
+input[type="date"]:focus,
 textarea:focus,
-select:focus {}
+select:focus {
+	border-color: #c89f2d;
+	outline: none;
+}
+
+input[type="date"] {
+	background-image: url(../img/calendar.png);
+	background-position: calc(100% - 11px) 50%;
+	background-repeat: no-repeat;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+	display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}
 
 textarea {}
 
@@ -133,7 +178,7 @@ textarea {}
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	padding-right: 88px;
+	padding-right: 17px;
 }
 
 .ba-header-bar {
@@ -141,6 +186,31 @@ textarea {}
 	justify-content: space-between;
 	align-items: center;
 }
+
+.ba-nav {
+	display: flex;
+	align-items: center;
+}
+
+.ba-social {
+	display: flex;
+	align-items: center;
+
+}
+
+.ba-social a {
+	font-size: 20px;
+	line-height: 1;
+}
+
+.ba-social a:hover {
+	color: white;
+}
+
+.ba-social a+a {
+	margin-left: 16px;
+}
+
 
 .ba-menu a {
 	text-decoration: none;
@@ -392,4 +462,43 @@ textarea {}
 
 .ba-menu-dish+.ba-menu-dish {
 	margin-top: 30px;
+}
+
+.ba-grid {
+	display: grid;
+	grid-template-columns: 3fr 3fr 6fr;
+	grid-gap: 30px;
+}
+
+.ba-booking {
+
+	max-width: 430px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -9px;
+}
+
+p {
+	margin: 0 0 13px;
+}
+
+.ba-booking-form__grid {
+	margin: 30px 0 33px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 36px;
+	grid-row-gap: 20px;
+}
+
+.ba-booking-form__grid input,
+.ba-booking-form__grid select {
+	width: 100%
+}
+
+.ba-label {
+	display: block;
+	color: #c9a131;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 7px;
 }
