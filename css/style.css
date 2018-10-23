@@ -290,7 +290,21 @@ textarea {}
 	font: 700 25px/1.8 'Gentium Book Basic', sans-serif;
 	color: #dde0df;
 	margin: 0 0 20px;
+	position: relative;
 }
+
+.ba-review:before {
+	content: '“';
+	position: absolute;
+	top: -20px;
+	right: 100%;
+	font-family: Georgia, serif;
+	color: rgba(243, 245, 245, .47);
+	font-size: 96px;
+	line-height: 1;
+}
+
+
 
 .ba-review cite {
 	font: 400 18px/1 Lato, sans-serif;
@@ -501,4 +515,42 @@ p {
 	font-size: 14px;
 	font-weight: 700;
 	margin-bottom: 7px;
+}
+
+/* footer */
+
+.ba-footer {
+	background: #191919;
+	color: white;
+	padding: 52px;
+	justify-content: center;
+}
+
+.ba-cards svg+svg {
+	margin-left: 10px;
+}
+
+.ba-cards {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+}
+
+.ba-social--footer {
+	justify-content: center;
+}
+
+.ba-social--footer,
+.ba-cards {
+	margin-top: 36px;
+}
+
+.ba-social--footer a {
+	font-size: 16px;
+	color: white;
+}
+
+.ba-social--footer a:hover {
+	color: #cc9900;
 }
