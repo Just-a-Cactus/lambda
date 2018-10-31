@@ -554,3 +554,56 @@ p {
 .ba-social--footer a:hover {
 	color: #cc9900;
 }
+
+.ba-burger:hover {
+	color: #cc9900;
+}
+
+.ba-burger {
+	display: none;
+	margin-left: 15px;
+	cursor: pointer;
+	color: white;
+
+	transition: transform .3s;
+}
+
+.ba-burger svg {
+	fill: currentColor;
+}
+
+@media (max-width:1024px) {
+	.ba-menu {
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: rgba(0, 0, 0, .9);
+		flex-direction: column;
+		min-height: 100vh;
+
+		transition: transform .3s;
+		transform: translateX(-100%)
+	}
+
+	:checked~.ba-menu {
+		transform: translateX(0);
+	}
+
+	:checked~.ba-burger {
+		transform: rotate(90deg);
+	}
+
+	.ba-menu a {
+		padding: 15px 20px;
+		border: none;
+	}
+
+
+	.ba-burger {
+		display: block;
+	}
+
+	.ba-menu li+li {
+		padding: 0;
+	}
+}
